@@ -1,26 +1,61 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div>
+        <TheHeader />
+        <TheIntro />
+        <TheNewArrivals />
+
+        <TheTopSelling />
+        <TheItemCategory />
+        <TheFeetback />
+        <TheFooter />
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import TheHeader from './components/layouts/TheHeader.vue';
+import TheIntro from './components/layouts/TheIntro.vue';
+import TheNewArrivals from './components/layouts/TheNewArrivals.vue';
+import TheTopSelling from './components/layouts/TheTopSelling.vue';
+import TheItemCategory from './components/layouts/TheItemCategory.vue';
+import TheFeetback from './components/layouts/TheFeetback.vue';
+import TheFooter from './components/layouts/TheFooter.vue';
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+    components: {
+        TheHeader,
+        TheIntro,
+        TheNewArrivals,
+        TheTopSelling,
+        TheItemCategory,
+        TheFeetback,
+        TheFooter,
+    },
+    data() {
+        return {};
+    },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+.a {
+    height: 500px;
+}
+.line-separation {
+    height: 1px;
+    background-color: #000000;
+    opacity: 10%;
+    margin: 80px 100px;
 }
 </style>
