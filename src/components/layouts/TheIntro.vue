@@ -340,12 +340,8 @@ export default {};
     .shop-now {
         margin-top: 10px;
         width: 100%;
-        /* top: 507px; */
-        /* left: 100px; */
         padding: 16px 54px 16px 54px;
-        /* gap: 12px; */
         border-radius: 30px;
-        opacity: 0px;
         background: black;
         color: white;
         margin-bottom: 10px;
@@ -382,6 +378,7 @@ export default {};
         line-height: 22px;
         text-align: left !important;
         opacity: 60%;
+        margin-top: -12px;
     }
     .banner-intro-mobile {
         width: 100%;
