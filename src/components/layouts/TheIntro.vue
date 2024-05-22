@@ -33,6 +33,7 @@
                 </div>
             </div>
             <div class="banner-intro"></div>
+            <div class="banner-intro-mobile"></div>
         </div>
         <div class="list-brands">
             <div>
@@ -161,16 +162,12 @@ export default {};
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Integral+CF:wght@400;700&display=swap');
 
-@media (max-width: 1200px) {
-    .intro-container {
-        display: none; /* Hide the element */
-    }
-}
 .intro-container {
     display: flex;
 }
 .text-intro {
     width: 50%;
+    height: fit-content;
     background-color: #f2f0f1;
     padding-left: 100px;
     /* border: 1px solid red; */
@@ -186,7 +183,7 @@ export default {};
     margin: 100px 0px 40px 0px;
 }
 .second-content {
-    width: 545px;
+    max-width: 545px;
     height: 33px;
     font-family: 'Satoshi', sans-serif;
     font-size: 16px;
@@ -197,14 +194,10 @@ export default {};
     margin-bottom: 40px;
 }
 .shop-now {
-    width: Fixed (210px) px;
-    height: Fixed (52px) px;
     /* top: 507px; */
     /* left: 100px; */
     padding: 16px 54px 16px 54px;
-    gap: 12px;
     border-radius: 30px;
-    opacity: 0px;
     background: black;
     color: white;
     margin-bottom: 40px;
@@ -212,11 +205,12 @@ export default {};
 .detail-infor {
     /* border: 1px solid black; */
     display: flex;
-    padding: 0 0 116px;
+    /* padding: 0 0 116px; */
+    padding-bottom: 100px;
 }
 .amount-cont {
-    text-justify: auto;
-    display: grid;
+    box-sizing: border-box;
+    text-align: center;
 }
 .line-separation {
     width: 1px;
@@ -242,23 +236,168 @@ export default {};
 }
 .banner-intro {
     width: 50%;
-    /* height: 663px; */
-
     background: url('../../assets/background-intro.jpg') center center no-repeat;
-    /* border: 1px solid green; */
     background-size: cover;
     transform-origin: top;
     background-position: top;
 }
+
 .list-brands {
     width: 100%;
-
-    height: 122px;
+    height: fit-content;
     background-color: #000000;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 125px;
-    padding: 0 100px;
+    padding: 40px 100px;
+}
+@media (max-width: 1080px) {
+    .intro-container {
+        display: flex;
+    }
+    .text-intro {
+        padding-left: 40px;
+    }
+    .text-intro {
+        width: 40%;
+    }
+    .banner-intro {
+        width: 60%;
+    }
+    .shop-now {
+        margin: 20px 0px;
+    }
+    .first-content {
+        letter-spacing: -0.09em;
+        font-size: 46px;
+        font-weight: 800;
+        line-height: 50px;
+        text-align: left;
+        margin: 25px 0px 25px 0px;
+    }
+    .second-content {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        text-align: left;
+        opacity: 60%;
+        margin-bottom: 60px;
+    }
+    .detail-infor {
+        margin: 20px 0px;
+        /* border: 1px solid black; */
+        display: block;
+        /* padding: 0 0 0px; */
+        white-space: normal;
+    }
+    .list-brands {
+        gap: 20px;
+        padding: 40px 25px;
+    }
+    /* .list-brands {
+        width: 100%;
+        height: fit-content;
+        background-color: #000000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding: 40px 40px;
+        text-align: center;
+    } */
+}
+@media (max-width: 768px) {
+    .intro-container {
+        /* display: flex; */
+        flex-direction: column;
+        width: 100%;
+    }
+    .text-intro {
+        padding: 25px;
+        width: 100%;
+    }
+    .banner-intro {
+        display: none;
+    }
+    .first-content {
+        letter-spacing: -0.09em;
+        font-size: 50px;
+        font-weight: 850;
+        line-height: 50px;
+        text-align: left;
+        margin: 25px 0px 25px 0px;
+    }
+    .second-content {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        text-align: left;
+        opacity: 60%;
+        margin-bottom: 40px;
+    }
+    .shop-now {
+        margin-top: 10px;
+        width: 100%;
+        /* top: 507px; */
+        /* left: 100px; */
+        padding: 16px 54px 16px 54px;
+        /* gap: 12px; */
+        border-radius: 30px;
+        opacity: 0px;
+        background: black;
+        color: white;
+        margin-bottom: 10px;
+    }
+    .detail-infor {
+        display: flex;
+        padding: 0px 40px;
+        flex-wrap: wrap;
+        white-space: normal;
+    }
+
+    .amount-cont {
+        flex: 1 1 calc(33.333% - 20px);
+        /* box-sizing: border-box; */
+        padding: 0px 20px; /* Increase padding for better spacing */
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center children horizontally */
+        justify-content: center; /* Center children vertically */
+    }
+    .line-separation {
+        display: none;
+    }
+    .amount {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 54px;
+        text-align: left !important;
+    }
+    .type-amount {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 22px;
+        text-align: left !important;
+        opacity: 60%;
+    }
+    .banner-intro-mobile {
+        width: 100%;
+        height: 480px;
+        background-color: #f2f0f1;
+        background: url('../../assets/background-intro.jpg') center center
+            no-repeat;
+        background-size: cover;
+        transform-origin: top;
+        background-position: center -62px;
+    }
+    .list-brands {
+        padding: 30px 25px;
+    }
+    /* svg {
+        width: 80%;
+    } */
 }
 </style>

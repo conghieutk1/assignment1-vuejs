@@ -62,7 +62,7 @@ export default {
 <style scoped>
 .feetback-box {
     border: 1px solid #c7c8cc;
-
+    min-width: 297px;
     padding: 20px;
     border-radius: 20px;
 }

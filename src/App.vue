@@ -3,7 +3,6 @@
         <TheHeader />
         <TheIntro />
         <TheNewArrivals />
-
         <TheTopSelling />
         <TheItemCategory />
         <TheFeetback />
@@ -35,7 +34,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 * {
@@ -52,10 +51,13 @@ body {
 .a {
     height: 500px;
 }
-.line-separation {
-    height: 1px;
-    background-color: #000000;
-    opacity: 10%;
-    margin: 80px 100px;
+.test-scss {
+    margin-top: 500px;
+    width: 100%;
+    height: 500px;
+    .test-scss-01 {
+        font-size: 30px;
+        border: 1px solid red;
+    }
 }
 </style>

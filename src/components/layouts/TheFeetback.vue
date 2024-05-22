@@ -69,6 +69,32 @@ export default {
 }
 .feetback-container {
     display: flex;
+    overflow-x: auto;
+    max-width: 100%;
     gap: 20px;
+}
+@media (max-width: 768px) {
+    .container {
+        padding: 0px 25px;
+        margin: 30px 0px;
+    }
+    .title {
+        margin: 30px 0px;
+        font-size: 40px;
+        line-height: 40px;
+        font-weight: 800;
+        text-align: left;
+        margin-right: auto;
+    }
+    .arrow-back {
+        right: -40px;
+        margin-right: 100px;
+        font-size: 40px;
+    }
+    .arrow-forward {
+        right: -80px;
+        margin-right: 100px;
+        font-size: 40px;
+    }
 }
 </style>

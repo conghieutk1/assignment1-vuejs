@@ -21,4 +21,10 @@ export default {
 .view-all:hover {
     background-color: #eeeeee;
 }
+@media (max-width: 768px) {
+    .view-all {
+        width: 100%;
+        margin: 0px 25px;
+    }
+}
 </style>

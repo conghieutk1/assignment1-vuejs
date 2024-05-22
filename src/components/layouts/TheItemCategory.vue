@@ -30,7 +30,7 @@
 
 <style scoped>
 .category-style {
-    height: 866px;
+    height: fit-content;
     background-color: #f0f0f0;
     padding: 80px 0px;
     margin: 0px 100px;
@@ -52,6 +52,7 @@
     gap: 30px;
 }
 .casual {
+    cursor: pointer;
     width: 35%;
     height: 289px;
     border-radius: 30px;
@@ -73,6 +74,7 @@
     text-align: left;
 }
 .formal {
+    cursor: pointer;
     width: 65%;
     height: 289px;
     /* border: 1px solid black; */
@@ -97,8 +99,10 @@
     border-radius: 15px;
     background-position: center;
     background-image: url('../../assets/items/style03.png');
+    cursor: pointer;
 }
 .gym {
+    cursor: pointer;
     /* border: 1px solid black; */
     width: 35%;
     height: 289px;
@@ -107,5 +111,35 @@
     background-size: cover;
     /* transform-origin: top; */
     background-position: center;
+}
+@media (max-width: 820px) {
+    .category-style {
+        padding: 60px 0px;
+        margin: 0px 25px;
+    }
+    .item-category-01 {
+        flex-direction: column;
+        padding: 0px 20px;
+    }
+    .casual {
+        width: 100%;
+        height: 200px;
+    }
+    .formal {
+        width: 100%;
+        height: 200px;
+    }
+    .item-category-02 {
+        flex-direction: column;
+        padding: 0px 20px;
+    }
+    .party {
+        width: 100%;
+        height: 200px;
+    }
+    .gym {
+        width: 100%;
+        height: 200px;
+    }
 }
 </style>

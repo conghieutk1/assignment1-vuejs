@@ -60,7 +60,7 @@
                 <div style="color: black; opacity: 60%">
                     Shop.co © 2000-2023, All Rights Reserved
                 </div>
-                <div>
+                <div class="list-pay-2">
                     <img src="../../assets/items/Badge.svg" />
                     <img src="../../assets/items/Badge (1).svg" />
                     <img src="../../assets/items/Badge (2).svg" />
@@ -74,7 +74,7 @@
 <style scoped>
 .footer-container {
     width: 100%;
-    height: 510px;
+    height: fit-content;
     /* background-color: #f0f0f0; */
     /* opacity: 10%; */
     background-color: white;
@@ -82,7 +82,7 @@
 }
 .stay-uptodate {
     margin: 0px 100px;
-    height: 180px;
+    height: fit-content;
     border-radius: 20px;
     color: white;
     background-color: black;
@@ -128,7 +128,7 @@
     /* border: 1px solid red; */
     flex-direction: column;
     margin: 35px 50px;
-    padding: 0px 30px 0px 250px;
+    /* padding: 0px 30px 0px 250px; */
     gap: 10px;
     /* display: grid; */
 }
@@ -143,6 +143,8 @@
     /* padding-top: 12px; */
     gap: 10px;
     padding-left: 20px;
+    width: 65%;
+    margin-left: auto;
 }
 .input-email {
     height: 48px;
@@ -163,13 +165,15 @@ button {
     text-align: center;
     background-color: #ffffff;
     cursor: pointer;
+    width: 65%;
+    margin-left: auto;
 }
 .contact-list {
     background-color: #f0f0f0;
     position: absolute;
     margin-top: -90px;
     width: 100%;
-    height: 100%;
+    height: fit-content;
     z-index: 1;
 }
 .about-container {
@@ -245,5 +249,93 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+@media (max-width: 768px) {
+    .stay-uptodate {
+        margin: 0px 25px;
+        padding: 30px 0px;
+        display: flex;
+        flex-direction: column;
+        padding: ;
+    }
+    .text-uptodate {
+        width: 100%;
+        padding: auto;
+        justify-content: center;
+        margin-bottom: 30px;
+        padding: 0px 20px;
+        font-size: 40px;
+        font-weight: 800;
+        line-height: 35px;
+        text-align: left;
+    }
+    .get-infor {
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        margin: 0px auto;
+        gap: 10px;
+    }
+    .box-enter-email {
+        width: 100%;
+        /* margin-left: auto; */
+    }
+    button {
+        width: 100%;
+    }
+    .contact-list {
+        /* display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 100%; */
+        padding: 0;
+    }
+    .about-container {
+        height: fit-content;
+        width: 100%;
+        padding: 150px 25px 0px 25px;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        flex-wrap: wrap;
+        /* flex-direction: column; */
+        width: 100%;
+    }
+    .mess {
+        width: 100%;
+        padding-right: 0px;
+    }
+    .company {
+        width: fit-content;
+        height: 100%;
+    }
+    .help {
+        width: fit-content;
+        height: 100%;
+    }
+    .faq {
+        width: fit-content;
+        height: 100%;
+    }
+    .resources {
+        width: fit-content;
+        height: 100%;
+    }
+    .line-separation {
+        width: calc(100% - 50px); /* Thêm phần trừ đi margin ở hai bên */
+        margin: 20px auto;
+    }
+    .list-pay {
+        width: calc(100% - 50px);
+        height: 100px;
+        margin: 0px auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .list-pay-2 {
+    }
 }
 </style>
